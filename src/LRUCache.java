@@ -10,7 +10,7 @@ public class LRUCache<K, V> {
     }
 
 
-    public V get (K key){
+    public V get(K key){
         if(keys.contains(key) && cacheMap.containsKey(key)){
             Node<K, V> temp = cacheMap.get(key);
             keys.remove(key);

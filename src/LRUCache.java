@@ -25,7 +25,7 @@ public class LRUCache<K, V> {
         return null;
     }
 
-    public void put(K key, V value, Date date){
+    public void write(K key, V value, Date date){
         if(keys.contains(key) && cacheMap.containsKey(key)){
             Node<K, V> temp = cacheMap.get(key);
             temp.setValue(value);

@@ -49,7 +49,7 @@ public class LRUCache<K, V> {
     }
 
 
-    public V remove (K key){
+    public V remove(K key){
         if(keys.contains(key) && cacheMap.containsKey(key)){
             Node<K, V> temp = cacheMap.remove(key);
             cacheMap.remove(key);

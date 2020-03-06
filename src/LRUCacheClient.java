@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-import java.util.Calendar;
 import java.util.Date;
 
 public class LRUCacheClient {

@@ -63,43 +63,56 @@ public class LRUCache<K, V> {
         return cacheMap.size();
     }
 
+    public String toString(){
+        StringBuilder str = new StringBuilder();
 
-
-
-    private class Node<K, V>{
-        private K key;
-        private V value;
-        private Date expireTime;
-
-        public Node (K pKey, V pValue, Date pExpire){
-            this.key = pKey;
-            this.value = pValue;
-            this.expireTime = pExpire;
+        for (K key: keys){
+            String temp = cacheMap.get(key).toString();
+            str.append(temp);
+            str.append("\n");
         }
 
-        public void setValue(V pValue){
-            this.value = pValue;
-        }
-
-        public void setExpireTime(Date pDate){
-            this.expireTime = pDate;
-        }
-
-        public V getValue(){
-            return this.value;
-        }
-
-
-        public boolean expire(){
-            if(this.expireTime.before(new Date())){
-                return true;
-            }else {
-                return false;
-            }
-        }
+        return str.toString();
     }
 
 
+}
+
+class Node<K, V>{
+    private K key;
+    private V value;
+    private Date expireTime;
+
+    public Node (K pKey, V pValue, Date pExpire){
+        this.key = pKey;
+        this.value = pValue;
+        this.expireTime = pExpire;
+    }
+
+    public void setValue(V pValue){
+        this.value = pValue;
+    }
+
+    public void setExpireTime(Date pDate){
+        this.expireTime = pDate;
+    }
+
+    public V getValue(){
+        return this.value;
+    }
+
+
+    public boolean expire(){
+        if(this.expireTime.before(new Date())){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public String toString(){
+        return key + ": " + value;
+    }
 }
 
 

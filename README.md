@@ -2,6 +2,8 @@
 
 ## Question C
 
+In Question C, **Deque** is used to order the time we access the cache. The node at the head of the Deque is the least recently used one. The **Map** is to store the respective value of each key. 
+
 ### 1. Simplicity:
 By packaging my codes into a **Gradle/Maven** project, we get a new library that is easy to integrate.
 

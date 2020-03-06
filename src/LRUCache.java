@@ -1,5 +1,16 @@
 import java.util.*;
 
+
+/*
+ I provided an expiration check in get function.
+ It won't keep checking continuously and
+ delete the value instantly after it expires.
+ If we wanted to check expiration continuously,
+ we would have to create a new thread.
+ This would make the codes way too complicated (break simplicity),
+ and the codes would become brittle.
+ */
+
 public class LRUCache<K, V> {
     private Map<K, Node> cacheMap = new HashMap<>();
     private Deque<K> keys = new LinkedList<>();

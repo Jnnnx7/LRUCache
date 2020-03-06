@@ -12,8 +12,8 @@ import java.util.*;
  */
 
 public class LRUCache<K, V> {
-    private Map<K, Node> cacheMap = new HashMap<>();
-    private Deque<K> keys = new LinkedList<>();
+    private Map<K, Node> cacheMap = new HashMap<>();  // Used to store values
+    private Deque<K> keys = new LinkedList<>();       // Used to store the order, the head is the least recently used cache
     private int capacity;
 
     public LRUCache(int pCapacity){
@@ -25,11 +25,13 @@ public class LRUCache<K, V> {
         if(keys.contains(key) && cacheMap.containsKey(key)){
             Node<K, V> temp = cacheMap.get(key);
             keys.remove(key);
+            // Check if cache expired
             if(temp.expire()){
                 cacheMap.remove(key);
                 System.out.println("Cache expires.");
                 return null;
             }else {
+                // Update the cache to be the latest used one
                 keys.addLast(key);
                 return temp.getValue();
             }
@@ -37,7 +39,9 @@ public class LRUCache<K, V> {
         return null;
     }
 
+
     public void write(K key, V value, Date date){
+        // if the key already exists, update value and expire date
         if(keys.contains(key) && cacheMap.containsKey(key)){
             Node<K, V> temp = cacheMap.get(key);
             temp.setValue(value);
@@ -62,10 +66,10 @@ public class LRUCache<K, V> {
 
     public void write(Node<K, V> pNode){
         if(keys.contains(pNode.getKey()) && cacheMap.containsKey(pNode.getKey())){
-            if(!pNode.getKey().equals(keys.getLast())){
-                keys.remove(pNode.getKey());
-                keys.addLast(pNode.getKey());
-            }
+            keys.remove(pNode.getKey());
+            keys.addLast(pNode.getKey());
+            // Update value in cacheMap
+            cacheMap.put(pNode.getKey(), pNode);
         }else{
             cacheMap.put(pNode.getKey(), pNode);
             keys.addLast(pNode.getKey());

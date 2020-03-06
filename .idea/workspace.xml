@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aa4fa8c-5788-46d9-80d4-46744987cb33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TestLRUCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LRUCacheClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRUCacheClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +37,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="JUnit.TestLRUCache">
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="OrmucoTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestLRUCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OrmucoTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestLRUCache" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestLRUCache.testGet_Contain_Expire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OrmucoTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestLRUCache" />
-      <option name="METHOD_NAME" value="testGet_Contain_Expire" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client" />
         <item itemvalue="JUnit.TestLRUCache" />
         <item itemvalue="JUnit.TestLRUCache.testRemove_Contain" />
         <item itemvalue="JUnit.TestLRUCache.testRemove_NotContain" />
         <item itemvalue="JUnit.TestLRUCache.testeGet_NotContain" />
-        <item itemvalue="JUnit.TestLRUCache.testGet_Contain_Expire" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583416659198</updated>
-      <workItem from="1583416662832" duration="7020000" />
+      <workItem from="1583416662832" duration="8014000" />
     </task>
     <servers />
   </component>
@@ -117,22 +112,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1750" height="282" key="GridCell.Tab.0.bottom" timestamp="1583502256876">
+    <state width="1750" height="282" key="GridCell.Tab.0.bottom" timestamp="1583508516208">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>
-    <state width="1750" height="282" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1583502256876" />
-    <state width="1750" height="282" key="GridCell.Tab.0.center" timestamp="1583502256876">
+    <state width="1750" height="282" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1583508516208" />
+    <state width="1750" height="282" key="GridCell.Tab.0.center" timestamp="1583508516207">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>
-    <state width="1750" height="282" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1583502256876" />
-    <state width="1750" height="282" key="GridCell.Tab.0.left" timestamp="1583502256875">
+    <state width="1750" height="282" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1583508516207" />
+    <state width="1750" height="282" key="GridCell.Tab.0.left" timestamp="1583508516207">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>
-    <state width="1750" height="282" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1583502256875" />
-    <state width="1750" height="282" key="GridCell.Tab.0.right" timestamp="1583502256876">
+    <state width="1750" height="282" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1583508516207" />
+    <state width="1750" height="282" key="GridCell.Tab.0.right" timestamp="1583508516208">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>
-    <state width="1750" height="282" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1583502256876" />
+    <state width="1750" height="282" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1583508516208" />
     <state width="1750" height="348" key="GridCell.Tab.1.bottom" timestamp="1583501915125">
       <screen x="0" y="23" width="1792" height="1033" />
     </state>

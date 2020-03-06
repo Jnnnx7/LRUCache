@@ -26,6 +26,7 @@ public class LRUCache<K, V> {
             Node<K, V> temp = cacheMap.get(key);
             keys.remove(key);
             if(temp.expire()){
+                cacheMap.remove(key);
                 System.out.println("Cache expires.");
                 return null;
             }else {
@@ -50,6 +51,24 @@ public class LRUCache<K, V> {
             Node<K, V> newNode = new Node<>(key, value, date);
             cacheMap.put(key, newNode);
             keys.addLast(key);
+
+            if(capacity < this.size()){
+                K firstKey = keys.getFirst();
+                cacheMap.remove(firstKey);
+                keys.removeFirst();
+            }
+        }
+    }
+
+    public void write(Node<K, V> pNode){
+        if(keys.contains(pNode.getKey()) && cacheMap.containsKey(pNode.getKey())){
+            if(!pNode.getKey().equals(keys.getLast())){
+                keys.remove(pNode.getKey());
+                keys.addLast(pNode.getKey());
+            }
+        }else{
+            cacheMap.put(pNode.getKey(), pNode);
+            keys.addLast(pNode.getKey());
 
             if(capacity < this.size()){
                 K firstKey = keys.getFirst();
@@ -86,6 +105,11 @@ public class LRUCache<K, V> {
         return str.toString();
     }
 
+    public void clear(){
+        cacheMap.clear();
+        keys.clear();
+    }
+
 
 }
 
@@ -112,6 +136,8 @@ class Node<K, V>{
         return this.value;
     }
 
+    public K getKey() { return this.key; }
+
 
     public boolean expire(){
         if(this.expireTime.before(new Date())){
@@ -123,6 +149,19 @@ class Node<K, V>{
 
     public String toString(){
         return key + ": " + value;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj == null){ return false; }
+        else if (obj == this){ return true; }
+        else if (obj.getClass() != this.getClass()) { return false; }
+        else { return ((Node)obj).key.equals(this.key) && ((Node)obj).value.equals(this.value); }
+    }
+
+    @Override
+    public int hashCode(){
+        return this.key.hashCode();
     }
 }
 

@@ -4,6 +4,7 @@ public class LRUCacheClient {
     public static void main(String[] args) {
        LRUCache<String, String> testCache = new LRUCache<>(4);
 
+
         testCache.write("1st cache", "This is the first cache.", new Date(120, 5,1));
         testCache.write("2nd cache", "This is the second cache.", new Date(127, 6, 1));
         testCache.write("3rd cache", "This is the third cache.", new Date(119, 11, 31));
